@@ -1,0 +1,395 @@
+/* GENERAL */
+
+@font-face {
+  font-family: "Swedbank Sans";
+  src: url(./Assets/SwedbankSans-Medium.ttf);
+}
+
+:root {
+  --brand-color-one: #fec202;
+  --brand-color-two: #f35b1c;
+  --brand-color-three: #ebf8f2;
+  --border-dark: 1px solid #bcd8db;
+  --border-focus: 1px solid #31a3ae;
+  --border-invalid: 1px solid red;
+  --main-text-color: #512b2b;
+}
+
+body {
+  font-family: "Swedbank Sans";
+  color: var(--main-text-color);
+  margin: 0;
+  padding: 0;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button {
+    outline: none;
+    box-shadow: none;
+}
+
+p {
+  padding-bottom: 10px;
+}
+
+p,
+a,
+span,
+label,
+textarea,
+select,
+td {
+  font-size: 12px;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+a,
+button {
+  background: var(--brand-color-one);
+  padding: 6px 10px;
+  cursor: pointer;
+  border: 1px solid var(--brand-color-one);
+}
+
+
+
+
+button:hover {
+  background: var(--brand-color-two);
+  border: 1px solid var(--brand-color-two);
+}
+
+.wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+}
+
+.wrapper-intro {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Must be selected sign */
+
+em {
+  color: #c15d54;
+  padding: 0 10px;
+}
+
+/* Form style */
+
+#form {
+  margin: 100px auto;
+  padding: 40px;
+  text-align: left;
+  min-width: 360px;
+  min-height: 360px;
+}
+
+/* Error message */
+
+error {
+  display:block
+}
+
+noerror {
+  display: none;
+}
+
+errorMessage {
+  font-size: 16px;
+}
+
+aside {
+  display:none;
+}
+
+/* INPUT STYLE */
+
+/* Text input */
+
+.text-input-container {
+  margin: 10px 0px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.text-input input[type="text"] {
+  padding: 10px;
+  border: var(--border-dark);
+  border-radius: 2px;
+}
+
+.text-input input:focus {
+  border: var(--border-focus);
+}
+
+.text-input-label {
+  margin-right: 10px;
+}
+
+/* Radio input */
+
+.radio-input-container {
+  margin: 10px 0px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.radio-input-container input[type="radio"] {
+  padding: 1px 2px;
+  position: relative !important;
+  background: #fff;
+}
+
+.radio-input-container input[type="radio"]::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border: var(--border-dark);
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  top: -5px;
+  left: -5px;
+  background: #fff;
+}
+
+.radio-input-container input[type="radio"]:checked::before {
+  border: 1px solid #f35b1c;
+}
+
+.radio-input-container input[type="radio"]:checked::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #f35b1c;
+  width: 12px;
+  height: 12px;
+  top: -1px;
+  left: -1px;
+}
+
+.radio-input-label {
+  margin-left: 10px;
+}
+
+/* Drop-down box input */
+
+.select-input-container select {
+  background-color: var(--brand-color-three);
+  border: var(--border-dark);
+  max-width: 360px;
+  padding: 7px 20px 7px 9px;
+  background-image: url(assets/sprite.svg);
+  background-position: 100% -126px;
+  border-radius: 2px;
+  -webkit-appearance: none; 
+}
+
+.select-input-container select:focus {
+  border: var(--border-focus);
+}
+
+/* Checkbox input */
+
+.checkbox-input-container input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-input-label {
+  margin-left: 10px;
+}
+
+.checkbox-input-container {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.checkbox {
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #31a3ae;
+  border-radius: 2px;
+}
+
+.checkbox-input-container:hover input ~ .checkbox {
+  background-color: #fec202;
+  border: 1px solid #fec202;
+}
+
+.checkbox-input-container input:checked ~ .checkbox {
+  background-color: #f35b1c;
+  border: 1px solid #f35b1c;
+}
+
+.checkbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-input-container input:checked ~ .checkbox:after {
+  display: block;
+}
+
+.checkbox-input-container .checkbox:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Textarea input */
+
+.textarea-input-container textarea {
+  border: var(--border-dark);
+  border-radius: 3px;
+  font-family: "Swedbank Sans";
+}
+
+.textarea-input-container textarea:focus {
+  border: var(--border-focus);
+}
+
+input.invalid {
+  border: var(--border-invalid)!important;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+  margin-top: 10px;
+  min-width: 360px;
+  height: auto;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  opacity: 0.25;
+  margin-right: 10px;
+}
+
+.navigation {
+  margin-top: 20px;
+}
+
+.progress {
+  margin-top: 40px;
+}
+
+/* Mark the active step: */
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  color: var(--brand-color-two);
+}
+
+.tooltip::before {
+  display: inline-block;
+  content: "";
+  background-image: url(assets/sprite.svg);
+  background-position: -130px -10px;
+  width: 20px;
+  height: 20px;
+  vertical-align: top;
+  cursor: pointer;
+  position: relative;
+  margin-left: 10px;
+}
+
+.tooltip:hover::before {
+  content: " ";
+  background-position: -130px -40px;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  text-align: center;
+  background-color: #eaded7;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 1.5;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 25%;
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #eaded7 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* SUMMARY PAGE */
+
+/* Table */
+
+.summary-table td {
+  padding-bottom: 10px;
+}
+
+.summary-table {
+  text-align: left;
+  margin-top:20px;
+}
+
+td:first-child {
+  padding-right: 40px;
+  font-weight: 700;
+}
+
+tr:first-child td {
+  color: var(--brand-color-two);
+  text-transform: uppercase;
+  font-weight: 400;
+}

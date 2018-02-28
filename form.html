@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+        <h1 id="showdata"></h1>
+    <div class="wrapper">
+        <form id="application" action="summary.html" method="GET">
+        <img class="logo" src="./assets/logo.png">
+        
+                <!-- TEXT INPUT -->
+
+            <div class="tab">
+                <div class="text-input">
+                    <h3>1. Type your name</h3>
+                    <label class="text-input-container">
+                        <span id="text-input-label" class="text-input-label">Name:<em>*</em></span>
+                        <input type="text" name="Person" maxlength="20" pattern="[A-Za-z]">
+                    </label>
+                </div>
+            </div>
+
+                <!-- RADIO INPUT -->
+
+            <div class="tab">
+                <div class="radio-input">
+                    <h3>2. Select your gender</h3>
+                    <label class="radio-input-container">
+                        <input type="radio" name="Gender" value="Male">
+                        <span class="radio-input-label">Male</span>
+                    </label>
+                    <label class="radio-input-container">
+                        <input type="radio" name="Gender" value="Female">
+                        <span class="radio-input-label">Female</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- CHECKBOX INPUT -->
+
+            <div class="tab">
+                <div class="checkbox-input">
+                    <h3>3. Select at least one source of income</h3>
+                    <label class="checkbox-input-container">
+                            <input value="Salary from a Job" type="checkbox" name="Income">
+                            <span class="checkbox"></span>
+                            <span class="checkbox-input-label">Salary from a Job</span>
+                    </label>
+                    <label class="checkbox-input-container">
+                            <input value="Individual activity" type="checkbox" name="Income">
+                            <span class="checkbox"></span>
+                            <span class="checkbox-input-label">Individual activity</span>
+                    </label>
+                    <label class="checkbox-input-container">
+                            <input value="Passive income" type="checkbox" name="Income">
+                            <span class="checkbox"></span>
+                            <span class="checkbox-input-label">Passive income</span>
+                            <div class="tooltip">
+                                <span class="tooltip-text">Passive means income from stocks, bonds, funds and real estate.</span>
+                            </div>
+                    </label>
+                    <label class="checkbox-input-container">
+                            <input value="Business"type="checkbox" name="Income">
+                            <span class="checkbox"></span>
+                            <span class="checkbox-input-label">Business</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- SELECT INPUT -->
+
+            <div class="tab">
+                <div class="select-input">
+                    <h3>4. Select your education</h3>
+                    <label class="select-input-container">
+                        <select name="Education" required>
+                            <option value=0 disabled selected value> -- select an option -- </option>
+                            <option value="None">None</option>
+                            <option value="High-School">High-school</option>
+                            <option value="Bachelor">Bachelor</option>
+                            <option value="Master">Master</option>
+                            <option value="Doctorate">Doctorate</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+
+            <!-- TEXTAREA INPUT -->
+
+            <div class="tab">
+                <div class="textarea-input">
+                    <h3>5. Please describe why do you need a loan</h3>
+                    <label class="textarea-input-container">
+                            <textarea name="Reason" form="application" rows="4" cols="40" maxlength="100"></textarea>
+                    </label>
+                </div>
+            </div>
+
+            <!-- NAVIGATION -->
+
+            <div class="navigation" style="overflow:auto;">
+                <div>
+                    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                </div>
+            </div>
+
+            <!-- PROGRESS -->
+
+            <div class="progress">
+                <span class="step">1</span>
+                <span class="step">2</span>
+                <span class="step">3</span>
+                <span class="step">4</span>
+                <span class="step">5</span>
+            </div>
+        </form>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
