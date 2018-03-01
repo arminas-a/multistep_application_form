@@ -20,6 +20,7 @@ body {
   color: var(--main-text-color);
   margin: 0;
   padding: 0;
+  background: #fafafa;
 }
 
 input:focus,
@@ -44,6 +45,7 @@ td {
   font-size: 12px;
   text-decoration: none;
   font-family: sans-serif;
+  color: var(--main-text-color);
 }
 
 a,
@@ -54,28 +56,28 @@ button {
   border: 1px solid var(--brand-color-one);
 }
 
+.logo {
+  width: 200px;
+  height:auto;
+}
 
 
-
-button:hover {
+a:hover, button:hover {
   background: var(--brand-color-two);
   border: 1px solid var(--brand-color-two);
 }
 
 .wrapper {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  margin: 2rem;
   text-align: left;
+max-width: 320px;
+padding: 30px;
+border: 1px solid var(--brand-color-one);
+
 }
 
-.wrapper-intro {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+.tab > * {
+  max-width: 320px;
 }
 
 /* Must be selected sign */
@@ -91,8 +93,7 @@ em {
   margin: 100px auto;
   padding: 40px;
   text-align: left;
-  min-width: 360px;
-  min-height: 360px;
+
 }
 
 /* Error message */
@@ -122,6 +123,7 @@ aside {
   white-space: nowrap;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .text-input input[type="text"] {
@@ -136,6 +138,23 @@ aside {
 
 .text-input-label {
   margin-right: 10px;
+}
+
+/* Number input */
+
+.number-input-container {
+  display: inline-block;
+}
+
+input[type="number"] {
+  border: var(--border-dark);
+  border-radius: 2px;
+  width: 32px;
+  height: 16px;
+  text-align: center;
+}
+input[type="number"]:focus {
+  border: var(--border-focus);
 }
 
 /* Radio input */
@@ -347,7 +366,7 @@ input.invalid {
   position: absolute;
   z-index: 1;
   bottom: 125%;
-  left: 25%;
+  left: 18.25%;
   /* Fade in tooltip */
   opacity: 0;
   transition: opacity 0.3s;

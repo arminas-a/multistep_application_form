@@ -10,7 +10,6 @@
 </head>
 
 <body>
-        <h1 id="showdata"></h1>
     <div class="wrapper">
         <form id="application" action="summary.html" method="GET">
         <img class="logo" src="./assets/logo.png">
@@ -21,8 +20,12 @@
                 <div class="text-input">
                     <h3>1. Type your name</h3>
                     <label class="text-input-container">
-                        <span id="text-input-label" class="text-input-label">Name:<em>*</em></span>
-                        <input type="text" name="Person" maxlength="20" pattern="[A-Za-z]">
+                        <span class="text-input-label">First name:<em>*</em></span>
+                        <input type="text" name="First name" maxlength="20" pattern="[A-Za-z]">
+                    </label>
+                    <label class="text-input-container">
+                        <span class="text-input-label">Second name:<em>*</em></span>
+                        <input type="text" name="Second name" maxlength="20">
                     </label>
                 </div>
             </div>
@@ -39,6 +42,11 @@
                     <label class="radio-input-container">
                         <input type="radio" name="Gender" value="Female">
                         <span class="radio-input-label">Female</span>
+                    </label>
+                    <h3>3. Your age</h3>
+                    <label class="number-input-container">
+                        <span class="text-input-label">Age:<em>*</em></span>
+                        <input type="number" name="Age" maxlength="2">
                     </label>
                 </div>
             </div>
@@ -81,7 +89,7 @@
                     <h3>4. Select your education</h3>
                     <label class="select-input-container">
                         <select name="Education" required>
-                            <option value=0 disabled selected value> -- select an option -- </option>
+                            <option disabled selected value> -- select an option -- </option>
                             <option value="None">None</option>
                             <option value="High-School">High-school</option>
                             <option value="Bachelor">Bachelor</option>

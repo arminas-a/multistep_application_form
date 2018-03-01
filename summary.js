@@ -27,10 +27,8 @@ table.className += "summary-table";
 // Add the table header
 const tr = document.createElement("tr");
 const leftRow = document.createElement("td");
-leftRow.innerHTML = "Question";
 tr.appendChild(leftRow);
 const rightRow = document.createElement("td");
-rightRow.innerHTML = "Answer";
 tr.appendChild(rightRow);
 table.appendChild(tr);
 
