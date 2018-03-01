@@ -1,12 +1,12 @@
-Project Title
+## Project Title
 
 Simple Vanilla JS multistep application form with validation and summary page.
 
-Getting Started
+## Getting Started
 
 Download and run index.html. 
 
-Motivation
+## Motivation
 
 I was given a task by a bank to create a simple application. Requirements were these:
 
@@ -23,20 +23,20 @@ anywhere.
 9. No pre-made frameworks or templates are used.
 10. The final result is an archived file which opens a working application form.
 
-Value
+## Value
 
-This application could save some time for those given the same task. Most of the examples in internet relly on jQuery, which is not very useful regarding prohibition of framework/library usage. 
+This application could save some time for those who are given similar pre-interview test as most of the examples in internet relly on jQuery, which is not very useful regarding prohibition of framework/library usage.
 
-Features
+## Instruction
 
-The validation model is dynamic. It supports additional inputs if you need to change the content. Make sure you use corrent classnames.
+The validation model is dynamic. It supports additional inputs if you need to change the content. Make sure you use corrent classnames and amount of tabs = steps.
 
-Instruction
+## Built With
 
-Built With
 HTML - Overall structure
 CSS - Style
 ES6 Javascript - Interaction
 
-License
+## License
+
 This project is licensed under the MIT License - see the LICENSE.md file for details
