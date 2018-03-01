@@ -47,7 +47,7 @@ function validateForm() {
 
   inputs.forEach(function(input) {
     function warning() {
-      alert("Please fill in your " + input.name);
+      alert("Please fill in your " + input.name.toLowerCase() + ".");
     }
 
     if (!input.value) {
