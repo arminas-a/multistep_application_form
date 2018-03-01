@@ -18,7 +18,7 @@ if (fixedURL)
         k = s[0],
         v = s[1] && decodeURIComponent(s[1]);
       (data[k] = data[k] || []).push(v);
-});
+    });
 
 // Create a new table
 const table = document.createElement("table");

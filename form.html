@@ -12,25 +12,29 @@
 <body>
     <div class="wrapper">
         <form id="application" action="summary.html" method="GET">
-        <img class="logo" src="./assets/logo.png">
-        
-                <!-- TEXT INPUT -->
+            <img class="logo" src="./assets/logo.png">
+
+            <!-- TEXT INPUT -->
 
             <div class="tab">
                 <div class="text-input">
                     <h3>1. Type your name</h3>
                     <label class="text-input-container">
-                        <span class="text-input-label">First name:<em>*</em></span>
+                        <span class="text-input-label">First name:
+                            <em>*</em>
+                        </span>
                         <input type="text" name="First name" maxlength="20" pattern="[A-Za-z]">
                     </label>
                     <label class="text-input-container">
-                        <span class="text-input-label">Second name:<em>*</em></span>
+                        <span class="text-input-label">Second name:
+                            <em>*</em>
+                        </span>
                         <input type="text" name="Second name" maxlength="20">
                     </label>
                 </div>
             </div>
 
-                <!-- RADIO INPUT -->
+            <!-- RADIO INPUT -->
 
             <div class="tab">
                 <div class="radio-input">
@@ -45,7 +49,9 @@
                     </label>
                     <h3>3. Your age</h3>
                     <label class="number-input-container">
-                        <span class="text-input-label">Age:<em>*</em></span>
+                        <span class="text-input-label">Age:
+                            <em>*</em>
+                        </span>
                         <input type="number" name="Age" maxlength="2">
                     </label>
                 </div>
@@ -57,28 +63,29 @@
                 <div class="checkbox-input">
                     <h3>3. Select at least one source of income</h3>
                     <label class="checkbox-input-container">
-                            <input value="Salary from a Job" type="checkbox" name="Income">
-                            <span class="checkbox"></span>
-                            <span class="checkbox-input-label">Salary from a Job</span>
+                        <input value="Salary from a Job" type="checkbox" name="Income">
+                        <span class="checkbox"></span>
+                        <span class="checkbox-input-label">Salary from a Job</span>
                     </label>
                     <label class="checkbox-input-container">
-                            <input value="Individual activity" type="checkbox" name="Income">
-                            <span class="checkbox"></span>
-                            <span class="checkbox-input-label">Individual activity</span>
+                        <input value="Individual activity" type="checkbox" name="Income">
+                        <span class="checkbox"></span>
+                        <span class="checkbox-input-label">Individual activity</span>
                     </label>
                     <label class="checkbox-input-container">
-                            <input value="Passive income" type="checkbox" name="Income">
-                            <span class="checkbox"></span>
-                            <span class="checkbox-input-label">Passive income</span>
-                            <div class="tooltip">
-                                <span class="tooltip-text">Passive means income from stocks, bonds, funds and real estate.</span>
-                            </div>
+                        <input value="Passive income" type="checkbox" name="Income">
+                        <span class="checkbox"></span>
+                        <span class="checkbox-input-label">Passive income</span>
+                        <div class="tooltip">
+                            <span class="tooltip-text">Passive means income from stocks, bonds, funds and real estate.</span>
+                        </div>
                     </label>
                     <label class="checkbox-input-container">
-                            <input value="Business"type="checkbox" name="Income">
-                            <span class="checkbox"></span>
-                            <span class="checkbox-input-label">Business</span>
+                        <input value="Business" type="checkbox" name="Income">
+                        <span class="checkbox"></span>
+                        <span class="checkbox-input-label">Business</span>
                     </label>
+
                 </div>
             </div>
 
@@ -106,7 +113,7 @@
                 <div class="textarea-input">
                     <h3>5. Please describe why do you need a loan</h3>
                     <label class="textarea-input-container">
-                            <textarea name="Reason" form="application" rows="4" cols="40" maxlength="100"></textarea>
+                        <textarea name="Reason" form="application" rows="4" cols="40" maxlength="100"></textarea>
                     </label>
                 </div>
             </div>
@@ -132,7 +139,7 @@
         </form>
 
     </div>
-    <script src="app.js"></script>
+    <script src="form.js"></script>
 </body>
 
 </html>

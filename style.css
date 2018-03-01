@@ -27,8 +27,8 @@ input:focus,
 select:focus,
 textarea:focus,
 button {
-    outline: none;
-    box-shadow: none;
+  outline: none;
+  box-shadow: none;
 }
 
 p {
@@ -58,11 +58,11 @@ button {
 
 .logo {
   width: 200px;
-  height:auto;
+  height: auto;
 }
 
-
-a:hover, button:hover {
+a:hover,
+button:hover {
   background: var(--brand-color-two);
   border: 1px solid var(--brand-color-two);
 }
@@ -70,14 +70,9 @@ a:hover, button:hover {
 .wrapper {
   margin: 2rem;
   text-align: left;
-max-width: 320px;
-padding: 30px;
-border: 1px solid var(--brand-color-one);
-
-}
-
-.tab > * {
-  max-width: 320px;
+  padding: 30px;
+  border: 1px solid var(--brand-color-one);
+  max-width: 260px;
 }
 
 /* Must be selected sign */
@@ -93,13 +88,12 @@ em {
   margin: 100px auto;
   padding: 40px;
   text-align: left;
-
 }
 
 /* Error message */
 
 error {
-  display:block
+  display: block;
 }
 
 noerror {
@@ -111,7 +105,7 @@ errorMessage {
 }
 
 aside {
-  display:none;
+  display: none;
 }
 
 /* INPUT STYLE */
@@ -130,6 +124,7 @@ aside {
   padding: 10px;
   border: var(--border-dark);
   border-radius: 2px;
+  max-width: 100px;
 }
 
 .text-input input:focus {
@@ -210,12 +205,11 @@ input[type="number"]:focus {
 .select-input-container select {
   background-color: var(--brand-color-three);
   border: var(--border-dark);
-  max-width: 360px;
   padding: 7px 20px 7px 9px;
   background-image: url(assets/sprite.svg);
   background-position: 100% -126px;
   border-radius: 2px;
-  -webkit-appearance: none; 
+  -webkit-appearance: none;
 }
 
 .select-input-container select:focus {
@@ -300,15 +294,13 @@ input[type="number"]:focus {
 }
 
 input.invalid {
-  border: var(--border-invalid)!important;
+  border: var(--border-invalid) !important;
 }
 
 /* Hide all steps by default: */
 .tab {
   display: none;
   margin-top: 10px;
-  min-width: 360px;
-  height: auto;
 }
 
 /* Make circles that indicate the steps of the form: */
@@ -399,7 +391,7 @@ input.invalid {
 
 .summary-table {
   text-align: left;
-  margin-top:20px;
+  margin-top: 20px;
 }
 
 td:first-child {
