@@ -16,14 +16,14 @@ showTab(currentTab);
 function showTab(n) {
   tab[n].style.display = "block";
   if (n == 0) {
-    document.getElementById("prevBtn").style.display = "none";
+    document.querySelector("#prevBtn").style.display = "none";
   } else {
-    document.getElementById("prevBtn").style.display = "inline";
+    document.querySelector("#prevBtn").style.display = "inline";
   }
   if (n == tab.length - 1) {
-    document.getElementById("nextBtn").innerHTML = "Submit";
+    document.querySelector("#nextBtn").innerHTML = "Submit";
   } else {
-    document.getElementById("nextBtn").innerHTML = "Next";
+    document.querySelector("#nextBtn").innerHTML = "Next";
   }
   fixStepIndicator(n);
 }
@@ -33,7 +33,7 @@ function nextPrev(n) {
   tab[currentTab].style.display = "none";
   currentTab = currentTab + n;
   if (currentTab >= tab.length) {
-    document.getElementById("application").submit();
+    document.querySelector("#application").submit();
     return false;
   }
   showTab(currentTab);
@@ -44,12 +44,10 @@ function validateForm() {
   // Select all types of input and put them into array
   const inputs = tab[currentTab].querySelectorAll("input, select, textarea");
   // A loop that checks every input field in the current tab:
-
-  inputs.forEach(function(input) {
+  inputs.forEach(input => {
     function warning() {
       alert("Please fill in your " + input.name.toLowerCase() + ".");
     }
-
     if (!input.value) {
       warning();
       valid = false;
@@ -57,31 +55,28 @@ function validateForm() {
       input === document.querySelector("input[type=radio]") &&
       !document.querySelector("input[type=radio]:checked")
     ) {
-      // Validate radio input
       warning();
       valid = false;
     } else if (
       input === document.querySelector("input[type=checkbox]") &&
       !document.querySelector("input[type=checkbox]:checked")
     ) {
-      // Validate checkbox input
       warning();
       valid = false;
     }
   });
-
   // Add active class if valid
   if (valid) {
-    document.getElementsByClassName("step")[currentTab].className += " finish";
+    document.querySelectorAll(".step")[currentTab].className += " finish";
   }
   // return the valid status
   return valid;
 }
 // Remove active class
 function fixStepIndicator(n) {
-  const x = document.getElementsByClassName("step");
-  for (i = 0; i < x.length; i++) {
-    x[i].className = x[i].className.replace(" active", "");
-  }
-  x[n].className += " active";
+  const steps = document.querySelectorAll(".step");
+  steps.forEach(step => {
+    step.className = step.className.replace(" active", "");
+  })
+  steps[n].className += " active";
 }
